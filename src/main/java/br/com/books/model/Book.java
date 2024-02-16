@@ -36,6 +36,9 @@ public class Book implements Serializable {
 	@Column(nullable = false, length = 255)
 	private String title;
 	
+	@Column(nullable = false)
+	private Boolean enabled;
+	
 	public Book() {
 		super();
 	}
@@ -80,9 +83,26 @@ public class Book implements Serializable {
 		this.title = title;
 	}
 
+	public Boolean getEnabled() {
+		return enabled;
+	}
+
+	public void setEnabled(Boolean enabled) {
+		this.enabled = enabled;
+	}
+
+	public Book(Long id, String author, Date launch_date, Double price, String title, Boolean enabled) {
+		this.id = id;
+		this.author = author;
+		this.launch_date = launch_date;
+		this.price = price;
+		this.title = title;
+		this.enabled = enabled;
+	}
+
 	@Override
 	public int hashCode() {
-		return Objects.hash(author, id, launch_date, price, title);
+		return Objects.hash(author, enabled, id, launch_date, price, title);
 	}
 
 	@Override
@@ -94,8 +114,8 @@ public class Book implements Serializable {
 		if (getClass() != obj.getClass())
 			return false;
 		Book other = (Book) obj;
-		return Objects.equals(author, other.author) && Objects.equals(id, other.id)
-				&& Objects.equals(launch_date, other.launch_date) && Objects.equals(price, other.price)
-				&& Objects.equals(title, other.title);
+		return Objects.equals(author, other.author) && Objects.equals(enabled, other.enabled)
+				&& Objects.equals(id, other.id) && Objects.equals(launch_date, other.launch_date)
+				&& Objects.equals(price, other.price) && Objects.equals(title, other.title);
 	}
 }

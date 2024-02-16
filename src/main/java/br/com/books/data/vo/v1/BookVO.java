@@ -22,6 +22,7 @@ public class BookVO extends RepresentationModel<BookVO> implements Serializable 
 	private Date launch_date;
 	private Double price;
 	private String title;
+	private Boolean enabled;
 	
 	public BookVO() {
 		super();
@@ -67,11 +68,28 @@ public class BookVO extends RepresentationModel<BookVO> implements Serializable 
 		this.title = title;
 	}
 
+	public Boolean getEnabled() {
+		return enabled;
+	}
+
+	public void setEnabled(Boolean enabled) {
+		this.enabled = enabled;
+	}
+
+	public BookVO(Long key, String author, Date launch_date, Double price, String title, Boolean enabled) {
+		this.key = key;
+		this.author = author;
+		this.launch_date = launch_date;
+		this.price = price;
+		this.title = title;
+		this.enabled = enabled;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = super.hashCode();
-		result = prime * result + Objects.hash(author, key, launch_date, price, title);
+		result = prime * result + Objects.hash(author, enabled, key, launch_date, price, title);
 		return result;
 	}
 
@@ -84,8 +102,8 @@ public class BookVO extends RepresentationModel<BookVO> implements Serializable 
 		if (getClass() != obj.getClass())
 			return false;
 		BookVO other = (BookVO) obj;
-		return Objects.equals(author, other.author) && Objects.equals(key, other.key)
-				&& Objects.equals(launch_date, other.launch_date) && Objects.equals(price, other.price)
-				&& Objects.equals(title, other.title);
+		return Objects.equals(author, other.author) && Objects.equals(enabled, other.enabled)
+				&& Objects.equals(key, other.key) && Objects.equals(launch_date, other.launch_date)
+				&& Objects.equals(price, other.price) && Objects.equals(title, other.title);
 	}
 }
