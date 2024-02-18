@@ -47,7 +47,7 @@ public class BookServices {
 				return p.add(linkTo(methodOn(BookController.class).findById(p.getKey())).withSelfRel());
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
-				e.printStackTrace();
+				//e.printStackTrace();
 				return null;
 			}
 		});
@@ -128,7 +128,7 @@ public class BookServices {
 		var entity = repository.findById(book.getKey()).orElseThrow(() -> new ResourceNotFoundException("No recordes found for this ID!"));
 		
 		entity.setAuthor(book.getAuthor());
-		entity.setLaunch_date(book.getLaunch_date());
+		entity.setLaunchDate(book.getlaunchDate());
 		entity.setPrice(book.getPrice());
 		entity.setTitle(book.getTitle());
 		

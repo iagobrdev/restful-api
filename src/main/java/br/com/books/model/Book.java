@@ -26,9 +26,9 @@ public class Book implements Serializable {
 	@Column(nullable = false, length = 100)
 	private String author;
 	
-	@Column(nullable = false)
+	@Column(name = "launch_date", nullable = false)
 	@Temporal(TemporalType.DATE)
-	private Date launch_date;
+	private Date launchDate;
 	
 	@Column(nullable = false)
 	private Double price;
@@ -36,7 +36,7 @@ public class Book implements Serializable {
 	@Column(nullable = false, length = 255)
 	private String title;
 	
-	@Column(nullable = false)
+	@Column(nullable = true)
 	private Boolean enabled;
 	
 	public Book() {
@@ -59,12 +59,12 @@ public class Book implements Serializable {
 		this.author = author;
 	}
 
-	public Date getLaunch_date() {
-		return launch_date;
+	public Date getLaunchDate() {
+		return launchDate;
 	}
 
-	public void setLaunch_date(Date launch_date) {
-		this.launch_date = launch_date;
+	public void setLaunchDate(Date launch_date) {
+		this.launchDate = launch_date;
 	}
 
 	public Double getPrice() {
@@ -91,10 +91,10 @@ public class Book implements Serializable {
 		this.enabled = enabled;
 	}
 
-	public Book(Long id, String author, Date launch_date, Double price, String title, Boolean enabled) {
+	public Book(Long id, String author, Date launchDate, Double price, String title, Boolean enabled) {
 		this.id = id;
 		this.author = author;
-		this.launch_date = launch_date;
+		this.launchDate = launchDate;
 		this.price = price;
 		this.title = title;
 		this.enabled = enabled;
@@ -102,7 +102,7 @@ public class Book implements Serializable {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(author, enabled, id, launch_date, price, title);
+		return Objects.hash(author, enabled, id, launchDate, price, title);
 	}
 
 	@Override
@@ -115,7 +115,7 @@ public class Book implements Serializable {
 			return false;
 		Book other = (Book) obj;
 		return Objects.equals(author, other.author) && Objects.equals(enabled, other.enabled)
-				&& Objects.equals(id, other.id) && Objects.equals(launch_date, other.launch_date)
+				&& Objects.equals(id, other.id) && Objects.equals(launchDate, other.launchDate)
 				&& Objects.equals(price, other.price) && Objects.equals(title, other.title);
 	}
 }

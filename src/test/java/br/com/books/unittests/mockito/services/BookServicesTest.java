@@ -6,7 +6,6 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.when;
 
-import java.util.List;
 import java.util.Optional;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -60,7 +59,7 @@ class BookServicesTest {
 		assertEquals("Some Author1", result.getAuthor());
 		assertEquals("Some Title1", result.getTitle());
 		assertEquals(25D, result.getPrice());
-		assertNotNull(result.getLaunch_date());
+		assertNotNull(result.getlaunchDate());
 	}
 	
 	@Test
@@ -86,7 +85,7 @@ class BookServicesTest {
 		assertEquals("Some Author1", result.getAuthor());
 		assertEquals("Some Title1", result.getTitle());
 		assertEquals(25D, result.getPrice());
-		assertNotNull(result.getLaunch_date());
+		assertNotNull(result.getlaunchDate());
 	}
 	
 	@Test
@@ -126,7 +125,7 @@ class BookServicesTest {
 		assertEquals("Some Author1", result.getAuthor());
 		assertEquals("Some Title1", result.getTitle());
 		assertEquals(25D, result.getPrice());
-		assertNotNull(result.getLaunch_date());
+		assertNotNull(result.getlaunchDate());
 	}
 	
 

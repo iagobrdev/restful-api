@@ -10,7 +10,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.github.dozermapper.core.Mapping;
 
-@JsonPropertyOrder ({"id", "author", "launch_date", "price", "title"})
+@JsonPropertyOrder ({"id", "author", "launchDate", "price", "title"})
 public class BookVO extends RepresentationModel<BookVO> implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -19,7 +19,7 @@ public class BookVO extends RepresentationModel<BookVO> implements Serializable 
 	@JsonProperty("id")
 	private Long key;
 	private String author;
-	private Date launch_date;
+	private Date launchDate;
 	private Double price;
 	private String title;
 	private Boolean enabled;
@@ -44,12 +44,12 @@ public class BookVO extends RepresentationModel<BookVO> implements Serializable 
 		this.author = author;
 	}
 
-	public Date getLaunch_date() {
-		return launch_date;
+	public Date getlaunchDate() {
+		return launchDate;
 	}
 
-	public void setLaunch_date(Date launch_date) {
-		this.launch_date = launch_date;
+	public void setLaunchDate(Date launchDate) {
+		this.launchDate = launchDate;
 	}
 
 	public Double getPrice() {
@@ -76,10 +76,10 @@ public class BookVO extends RepresentationModel<BookVO> implements Serializable 
 		this.enabled = enabled;
 	}
 
-	public BookVO(Long key, String author, Date launch_date, Double price, String title, Boolean enabled) {
+	public BookVO(Long key, String author, Date launchDate, Double price, String title, Boolean enabled) {
 		this.key = key;
 		this.author = author;
-		this.launch_date = launch_date;
+		this.launchDate = launchDate;
 		this.price = price;
 		this.title = title;
 		this.enabled = enabled;
@@ -89,7 +89,7 @@ public class BookVO extends RepresentationModel<BookVO> implements Serializable 
 	public int hashCode() {
 		final int prime = 31;
 		int result = super.hashCode();
-		result = prime * result + Objects.hash(author, enabled, key, launch_date, price, title);
+		result = prime * result + Objects.hash(author, enabled, key, launchDate, price, title);
 		return result;
 	}
 
@@ -103,7 +103,7 @@ public class BookVO extends RepresentationModel<BookVO> implements Serializable 
 			return false;
 		BookVO other = (BookVO) obj;
 		return Objects.equals(author, other.author) && Objects.equals(enabled, other.enabled)
-				&& Objects.equals(key, other.key) && Objects.equals(launch_date, other.launch_date)
+				&& Objects.equals(key, other.key) && Objects.equals(launchDate, other.launchDate)
 				&& Objects.equals(price, other.price) && Objects.equals(title, other.title);
 	}
 }

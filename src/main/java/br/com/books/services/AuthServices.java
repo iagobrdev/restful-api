@@ -43,7 +43,7 @@ public class AuthServices {
 			}
 			return ResponseEntity.ok(tokenResponse);
 		} catch (Exception e) {
-			e.printStackTrace();
+			//e.printStackTrace();
 			throw new BadCredentialsException("Invalid username/password supplied!");
 		}
 	}
