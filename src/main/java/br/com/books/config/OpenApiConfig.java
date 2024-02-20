@@ -5,7 +5,6 @@ import org.springframework.context.annotation.Configuration;
 
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;
-import io.swagger.v3.oas.models.info.License;
 
 @Configuration
 public class OpenApiConfig {
@@ -14,15 +13,15 @@ public class OpenApiConfig {
 	public OpenAPI customOpenAPI() {
 		return new OpenAPI()
 				.info(new Info()
-						.title("RESTful API with Java 18 and Spring Boot 4")
+						.title("Books RESTful Api")
 						.version("v1")
-						.description("Some description about yout API")
-						.termsOfService("http://localhost:8080")
+						.description("API developed for my portfolio.")
+						/*.termsOfService("http://localhost:8080")
 						.license(
 								new License()
 								.name("Apache 2.0")
 								.url("http://localhost:8080")
-								)
+								)*/
 						);
 	}
 	

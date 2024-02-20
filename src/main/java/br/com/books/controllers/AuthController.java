@@ -25,7 +25,7 @@ public class AuthController {
 	AuthServices authServices;
 	
 	@SuppressWarnings("rawtypes")
-	@Operation(summary = "Authenticates a user and returns a token")
+	@Operation(hidden = true)
 	@PostMapping(value = "/signin")
 	public ResponseEntity signin(@RequestBody AccountCredentialsVO data) {
 		if (checkIfParamsIsNotNull(data))
@@ -36,7 +36,7 @@ public class AuthController {
 	}
 	
 	@SuppressWarnings("rawtypes")
-	@Operation(summary = "Refresh token for authenticated user and returns a token")
+	@Operation(hidden = true)
 	@PutMapping(value = "/refresh/{username}")
 	public ResponseEntity refreshToken(@PathVariable("username") String username,
 			@RequestHeader("Authorization") String refreshToken) {
