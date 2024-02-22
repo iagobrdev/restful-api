@@ -34,7 +34,7 @@ Todos os **Endpoints** disponíveis na API estão documentados com o **Swagger**
 
 ## Banco de Dados
 
-Esse projeto utilizado o **MySQL** como bando de dados relacional. Para mapeamento do mesmo dentro da aplicação foi utilizado o **Hibernate** e para criação das migrations, usei o **FlyWay**.
+Foi utilizado o **MySQL** como banco de dados relacional. Para mapeamento do mesmo dentro da aplicação foi utilizado o **Hibernate** e para criação das migrations, usei o **FlyWay**.
 
 ## Arquitetura SOA (Service-Oriented Architecture)
 
