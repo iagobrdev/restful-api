@@ -48,9 +48,9 @@ Exemplo:
 ```mermaid
 graph LR
 A((Client)) --> B{API}
-B --> C[Controler  = VO]
+B --> C[Controller  = VO]
 C --> D[Services = DozzerMapper]
-D --> E[Respository = Entity]
+D --> E[Repository = Entity]
 E --> F{Database}
 F --> E
 E --> D
