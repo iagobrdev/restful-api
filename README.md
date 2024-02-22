@@ -63,4 +63,4 @@ Foram realizados alguns **testes unitários** com o **JUnit** e o **Mockito** pa
 
 Exemplo dos testes unitários **(JUnit + Mockit)**.![](assets/junit.png)
 
-Exemplo do teste de integração (**REST Assured** + **Testcontainers**).![](testcontainers/junit.png)
+Exemplo do teste de integração (**REST Assured** + **Testcontainers**).![](assets/testcontainers.png)
