@@ -36,7 +36,7 @@ Todos os **Endpoints** disponíveis na API estão documentados com o **Swagger**
 
 Foi utilizado o **MySQL** como banco de dados relacional. Para mapeamento do mesmo dentro da aplicação foi utilizado o **Hibernate** e para criação das migrations, usei o **FlyWay**.
 
-## Arquitetura SOA (Service-Oriented Architecture)
+## Arquitetura de Camadas (Layered Architecture)
 
 Em resumo a API funciona assim: Após receber uma requisição **HTTP**, será validado o **accessToken**, caso seja inválido ou não exista, retornará um erro do tipo **"403 - Forbiden"**.  
 
