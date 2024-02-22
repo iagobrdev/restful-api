@@ -7,7 +7,6 @@ import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.PagedModel;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
@@ -92,7 +91,6 @@ public class BookController {
 		return ResponseEntity.ok(service.findBooksByAuthor(author, pageable));
 	}
 	
-	@CrossOrigin("http://localhost:8080")
 	@GetMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
 	@Operation(summary = "Finds a Book", description = "Finds a Book", 
 		tags = {"Book"},
@@ -114,7 +112,6 @@ public class BookController {
 		return service.findById(id);
 	}
 	
-	@CrossOrigin("http://localhost:8080")
 	@PostMapping(produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
 	@Operation(summary = "Add a Book", description = "Add a Book", 
 		tags = {"Book"},
@@ -155,7 +152,6 @@ public class BookController {
 		return service.update(Book);
 	}
 	
-	@CrossOrigin("http://localhost:8080")
 	@PatchMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
 	@Operation(summary = "Disable a specific Book by your ID", description = "Disable a specific Book by your ID", 
 		tags = {"Book"},
