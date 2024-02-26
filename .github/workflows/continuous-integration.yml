@@ -23,10 +23,11 @@ jobs:
 
     - name: Build Application JAR
       working-directory: ./backend
-      run: mvn clean package && cd ..
+      run: mvn clean package
 
     - name: Docker Compose Build
-      run: docker compose build
+      working-directory: ./backend
+      run: cd.. && docker compose build
 
     - name: Push to Docker Hub Container Registry
       run: |
