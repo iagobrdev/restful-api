@@ -2,6 +2,8 @@
 
 Esse projeto consiste no desenvolvimento de uma **API RESTful** feita em **Spring Boot 3** e **Java 18**.
 
+[![Docker Hub Repo](https://img.shields.io/docker/pulls/iagobrdev/books.svg)](https://hub.docker.com/repository/docker/iagobrdev/books)
+
 
 ## Tecnologias Utilizadas
 

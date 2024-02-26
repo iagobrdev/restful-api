@@ -1,7 +1,7 @@
 server:
   port: 8888
 cors:
-  originPatterns: http://localhost:8080,http://localhost:3000,http://iagobrdev.com.br,https://iagobrdev.com.br
+  originPatterns: http://localhost,http://iagobrdev.com.br,https://iagobrdev.com.br
 security:
   jwt:
     token:
