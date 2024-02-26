@@ -22,11 +22,9 @@ jobs:
         cache: maven
 
     - name: Build Application JAR
-      working-directory: ./books
       run: mvn clean package
 
     - name: Docker Compose Build
-      working-directory: ./Spring-Boot
       run: docker compose build
 
     - name: Push to Docker Hub Container Registry
