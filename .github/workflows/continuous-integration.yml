@@ -27,9 +27,7 @@ jobs:
 
     - name: Docker Compose Build
       working-directory: ./backend
-      run: |
-        cd ..
-        docker compose build
+      run: docker compose build
 
     - name: Push to Docker Hub Container Registry
       run: |
