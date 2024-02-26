@@ -1,7 +1,7 @@
 server:
   port: 8888
 cors:
-  originPatterns: http://localhost,http://iagobrdev.com.br,https://iagobrdev.com.br
+  originPatterns: http://localhost,https://iagobrdev.com.br
 file:
   upload-dir: /home/runner/work/restful-api/uploadDir
 security:

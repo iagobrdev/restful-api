@@ -1,7 +1,7 @@
 server:
   port: 8080
 cors:
-  originPatterns: http://localhost,http://iagobrdev.com.br,https://iagobrdev.com.br
+  originPatterns: http://localhost,https://iagobrdev.com.br
 security:
   jwt:
     token:
