@@ -26,10 +26,8 @@ jobs:
       run: mvn clean package
 
     - name: Docker Compose Build
-      working-directory: ./
       run: 
-        cd ..
-        docker compose build
+        cd .. && docker compose build
 
     - name: Push to Docker Hub Container Registry
       run: |
