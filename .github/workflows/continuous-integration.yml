@@ -23,13 +23,10 @@ jobs:
 
     - name: Build Application JAR
       working-directory: ./backend
-      run: mvn clean package
+      run: mvn clean package && cd ..
 
     - name: Docker Compose Build
-      working-directory: ./restful-api
-      run: |
-        cd ..
-        docker compose build
+      run: docker compose build
 
     - name: Push to Docker Hub Container Registry
       run: |
