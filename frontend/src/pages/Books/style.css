@@ -1,0 +1,4 @@
+button:hover {
+    filter: brightness(130%);
+    transition: filter 0.3s ease; /* Suaviza a transição do efeito */
+}
