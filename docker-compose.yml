@@ -9,7 +9,7 @@ services:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_USER: docker
       MYSQL_PASSWORD: docker
-      MYSQL_DATABASE: database_books
+      MYSQL_DATABASE: database_backend
       MYSQL_ROOT_HOST: '%'
       MYSQL_TCP_PORT: 3308
     ports:
@@ -17,15 +17,15 @@ services:
     expose:
       - 3308
     networks:
-      - books-network
-  books:
-    image: iagobrdev/books
+      - backend-network
+  backend:
+    image: iagobrdev/backend
     restart: always
-    build: ./
+    build: ./backend
     working_dir: /backend
     environment:
       TZ: America/Sao_Paulo
-      SPRING.DATASOURCE.URL: jdbc:mysql://db:3308/database_books?useTimezone=true&serverTimezone=UTC
+      SPRING.DATASOURCE.URL: jdbc:mysql://db:3308/database_backend?useTimezone=true&serverTimezone=UTC
       SPRING.DATASOURCE.USERNAME: root
       SPRING.DATASOURCE.PASSWORD: root
     ports:
@@ -34,7 +34,7 @@ services:
     depends_on:
       - db
     networks:
-      - books-network
+      - backend-network
 networks:
-  books-network:
+  backend-network:
     driver: bridge
