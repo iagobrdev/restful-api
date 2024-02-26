@@ -26,8 +26,8 @@ jobs:
       run: mvn clean package
 
     - name: Docker Compose Build
-      run: 
-        cd .. && docker compose build
+      working-directory: ./restful-api
+      run: cd .. && docker compose build
 
     - name: Push to Docker Hub Container Registry
       run: |
