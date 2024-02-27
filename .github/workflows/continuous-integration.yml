@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+env:
+  BOOKS_URL: https://books.iagobrdev.com.br
 
 jobs:
   build:

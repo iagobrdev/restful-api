@@ -27,7 +27,7 @@ export default function Portfolio() {
                         <li>O banco de dados utilizado foi o <b>MySQL</b> e para o mapeamento foi usado o <b>Hibernate</b>.</li>
                         <li>A validação de usuário e senha é baseada em Autenticação com <b>JWT</b> e <b>Spring Security</b>.</li>
                         <li>Foi utilizado o <b>JUnit</b> e o <b>Mockito</b> para realizar os testes unitário e testes de integração.</li>
-                        <li>Para documentação da API foi utilizado o <b>Swagger</b>, você pode acessar a documentação clicando <a href="http://localhost:8080/swagger-ui/index.html" target="_BLANK" rel="noreferrer">aqui</a>.</li>
+                        <li>Para documentação da API foi utilizado o <b>Swagger</b>, você pode acessar a documentação clicando <a href="https://books.iagobrdev.com.br/swagger-ui/index.html" target="_BLANK" rel="noreferrer">aqui</a>.</li>
                     </ul>
                 </div>
             </Container>
