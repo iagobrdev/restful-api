@@ -24,7 +24,7 @@ export default function NavBar() {
                 <div className="d-flex flex-column">
                     <div className="profile">
                         <img src={img} alt="" className="img-fluid rounded-circle"/>
-                        <h1 className="text-light"><a href="index.html">Iago Bertoletti Ribeiro</a></h1>
+                        <h1 className="text-light"><a href="index.html">Teste de Container</a></h1>
                         <div className="social-links mt-3 text-center">
                             <p className="text-light">Sênior Full Stack / Tech Lead</p>
                             <a href="https://github.com/iagobrdev" target="_BLANK" rel="noreferrer" className="github"><i className="bx bxl-github"></i></a>
