@@ -18,8 +18,31 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
+      - name: Set up JDK 18
+        uses: actions/setup-java@v3
+        with:
+          java-version: '18'
+          distribution: 'adopt'
+          cache: maven
+
+      - name: Build Backend Application JAR
+        working-directory: ./backend
+        run: mvn clean package
+
+      - name: Build Frontend Application
+        working-directory: ./frontend
+
       - name: Docker Compose Build
         run: docker compose build
 
-      - name: Push to Docker Hub Container Registry
-        run: docker compose push
+      - name: Push Backend to Docker Hub Container Registry
+        run: |
+          docker tag ${{ secrets.DOCKER_USERNAME }}/books:latest ${{ secrets.DOCKER_USERNAME }}/books:${{ github.run_id }}
+          docker push ${{ secrets.DOCKER_USERNAME }}/books:${{ github.run_id }}
+          docker push ${{ secrets.DOCKER_USERNAME }}/books:latest
+      
+      - name: Push Frontend to Docker Hub Container Registry
+        run: |
+          docker tag ${{ secrets.DOCKER_USERNAME }}/frontend:latest ${{ secrets.DOCKER_USERNAME }}/frontend:${{ github.run_id }}
+          docker push ${{ secrets.DOCKER_USERNAME }}/frontend:${{ github.run_id }}
+          docker push ${{ secrets.DOCKER_USERNAME }}/frontend:latest
