@@ -18,10 +18,20 @@ services:
       - 3308
     networks:
       - books-network
+      
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - 3000:3000
+    networks:
+      - books-network
+      
   books:
     image: iagobrdev/books
     restart: always
-    build: ./backend
     working_dir: /backend
     environment:
       TZ: America/Sao_Paulo
@@ -37,6 +47,7 @@ services:
       - db
     networks:
       - books-network
+      
 networks:
   books-network:
     driver: bridge
