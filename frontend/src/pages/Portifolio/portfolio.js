@@ -13,12 +13,12 @@ export default function Portfolio() {
                     </p>
                     <p>
                         Para ter acesso aos códigos fonte, acesse meu perfil no 
-                        <a href="https://github.com/iagobrdev" target="_blank" rel="noopener noreferrer"> GitHub</a>.
+                        <a href="https://github.com/iagobrdev" target="_blank" rel="noreferrer"> GitHub</a>.
                     </p>
                 </div>
                 <div className="resume-item">
                     <h4>
-                        <a href="/login" target="_blank" rel="noopener noreferrer">Integração React & API RESTful Java</a>
+                        <a href="/login" target="_blank" rel="noreferrer">Integração React & API RESTful Java</a>
                     </h4>
                     <p><em>Clique no link acima para acessar a aplicação.</em></p>
                     <ul style={{ textAlign: 'justify' }}>
@@ -27,7 +27,7 @@ export default function Portfolio() {
                         <li>O banco de dados utilizado foi o <b>MySQL</b> e para o mapeamento foi usado o <b>Hibernate</b>.</li>
                         <li>A validação de usuário e senha é baseada em Autenticação com <b>JWT</b> e <b>Spring Security</b>.</li>
                         <li>Foi utilizado o <b>JUnit</b> e o <b>Mockito</b> para realizar os testes unitário e testes de integração.</li>
-                        <li>Para documentação da API foi utilizado o <b>Swagger</b>, você pode acessar a documentação clicando <a href="http://localhost:8080/swagger-ui/index.html" target="_BLANK">aqui</a>.</li>
+                        <li>Para documentação da API foi utilizado o <b>Swagger</b>, você pode acessar a documentação clicando <a href="http://localhost:8080/swagger-ui/index.html" target="_BLANK" rel="noreferrer">aqui</a>.</li>
                     </ul>
                 </div>
             </Container>

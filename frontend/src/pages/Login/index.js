@@ -98,7 +98,7 @@ function LoginFormCard({ userName, setUserName, password, setPassword, login }) 
 		</form>
 		</Card.Body>
 		<Card.Footer style={{textAlign: 'center'}}>
-			<p><b>Atenção!</b> Para ter acesso ao Username e Password, será necessário entrar em contato através do <a href="https://wa.me/+5555999985378" target="_BLANK">WhatsApp.</a></p>
+			<p><b>Atenção!</b> Para ter acesso ao Username e Password, será necessário entrar em contato através do <a href="https://wa.me/+5555999985378" target="_BLANK" rel="noreferrer">WhatsApp.</a></p>
 		</Card.Footer>
 	</Card>
 	);

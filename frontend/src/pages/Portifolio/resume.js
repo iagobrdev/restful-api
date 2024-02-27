@@ -24,7 +24,7 @@ export default function Resume() {
                     <Col lg={6} data-aos="fade-up" data-aos-delay="100">
                         <h3 className="resume-title">Experiência Profissional</h3>
                         <div className="resume-item">
-                            <h4>Sênior Full Stack / Tech Lead no <a href="https://sinahab.com.br" target="_BLANK">SiNaHab</a></h4>
+                            <h4>Sênior Full Stack / Tech Lead no <a href="https://sinahab.com.br" target="_BLANK" rel="noreferrer">SiNaHab</a></h4>
                             <h5>2018 - Atualmente</h5>
                             <p><em>Paraná - BR </em></p>
                             <ul style={{textAlign: 'justify'}}>
@@ -40,13 +40,13 @@ export default function Resume() {
                             </ul>
                         </div>
                         <div className="resume-item">
-                            <h4>Backend Developer Pleno / Sênior na <a href="https://www.ibrsoft.com" target="_BLANK">iBR Tecnologia</a></h4>
+                            <h4>Backend Developer Pleno / Sênior na <a href="https://www.ibrsoft.com" target="_BLANK" rel="noreferrer">iBR Tecnologia</a></h4>
                             <h5>2010 - 2018</h5>
                             <p><em>Rio Grande do Sul - BR </em></p>
                             <ul style={{textAlign: 'justify'}}>
                                 <li>Desenvolvi, mantive e atualizei um <b>ERP</b> chamado <b>iBRSFOT</b> que hoje é o principal produto da empresa.</li>
                                 <li>Estudei toda a parte fiscal para desenvolver e manter atualizado cada <b>módulo fiscal</b> do <b>ERP</b> (NF-e, NFS-e, CT-e, MDF-e, SPED, SINTEGRA).</li>
-                                <li>Em 2014 para atender a lei federal <a href="https://legis.senado.leg.br/norma/584788#:~:text=Regula%20e%20disciplina%20a%20atividade,automotores%20terrestres%3B%20altera%20o%20art." target="_BLANK">nº 12.977</a> desenvolvi em apenas 6(seis) dias o <b>iBRSOFT CDV</b>, sistema voltado para o segmento de desmonte de veículos e o primeiro desmonte do Brasil foi <b>homologado</b> utilizando o <b>iBRSOFT CDV</b>. Hoje a iBR é a maior empresa do Brasil no segmento.</li>
+                                <li>Em 2014 para atender a lei federal <a href="https://legis.senado.leg.br/norma/584788#:~:text=Regula%20e%20disciplina%20a%20atividade,automotores%20terrestres%3B%20altera%20o%20art." target="_BLANK" rel="noreferrer">nº 12.977</a> desenvolvi em apenas 6(seis) dias o <b>iBRSOFT CDV</b>, sistema voltado para o segmento de desmonte de veículos e o primeiro desmonte do Brasil foi <b>homologado</b> utilizando o <b>iBRSOFT CDV</b>. Hoje a iBR é a maior empresa do Brasil no segmento.</li>
                                 <li>Fui o responsável direto pelo desenvolvimento e homologação do <b>TEF</b> e do <b>PAF-ECF</b>. </li>
                                 <li>Já construí diversas <b>API’s</b> para comunicação entre os sistemas, possuo experiência com <b>Web Services</b>.</li>
                                 <li>Desenvolvi 2(dois) aplicativos <b>mobile</b>, um para <b>pedidos externos</b> e outro para <b>ordens de serviço online</b>, ambos foram desenvolvidos usando <b>Node</b> e <b>React</b>.</li>

@@ -27,8 +27,8 @@ export default function NavBar() {
                         <h1 className="text-light"><a href="index.html">Iago Bertoletti Ribeiro</a></h1>
                         <div className="social-links mt-3 text-center">
                             <p className="text-light">Sênior Full Stack / Tech Lead</p>
-                            <a href="https://github.com/iagobrdev" target="_BLANK" className="github"><i className="bx bxl-github"></i></a>
-                            <a href="https://www.linkedin.com/in/iagobrdev/" target="_BLANK" className="linkedin"><i className="bx bxl-linkedin"></i></a>
+                            <a href="https://github.com/iagobrdev" target="_BLANK" rel="noreferrer" className="github"><i className="bx bxl-github"></i></a>
+                            <a href="https://www.linkedin.com/in/iagobrdev/" target="_BLANK" rel="noreferrer" className="linkedin"><i className="bx bxl-linkedin"></i></a>
                         </div>
                     </div>
                     <nav id="navbar" className="nav-menu navbar">

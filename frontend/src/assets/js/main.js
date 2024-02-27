@@ -4,8 +4,7 @@ import { Waypoint } from 'react-waypoint';
 
 
 (function() {
-  "use strict";
-
+  
   /**
    * Easy selector helper function
    */

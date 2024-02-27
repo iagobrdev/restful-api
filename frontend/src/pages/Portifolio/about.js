@@ -34,7 +34,7 @@ export default function About() {
                                 <li>
                                     <i className="bi bi-chevron-right"></i> <strong>Telefone:</strong>{' '}
                                     <span>
-                                    <a href="https://wa.me/+5555999985378" target="_BLANK">
+                                    <a href="https://wa.me/+5555999985378" target="_BLANK" rel="noreferrer">
                                         +55 (55) 9 9998-5378
                                     </a>
                                     </span>
