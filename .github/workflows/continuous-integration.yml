@@ -50,13 +50,13 @@ jobs:
           docker push ${{ secrets.DOCKER_USERNAME }}/frontend:latest
           
       - name: EasyPanel Deploy Request - Frontend
-        uses: actions/http-request@v2
+        uses: Byron4Kids/http-request-action@v2
         with:
           url: 'http://179.43.41.65:3000/api/deploy/f424ff0be773efa96d45ae866f0c5eb7b5bedf034a9a6fdd'
           method: 'POST'
           
       - name: EasyPanel Deploy Request - Backend
-        uses: actions/http-request@v2
+        uses: Byron4Kids/http-request-action@v2
         with:
           url: 'http://179.43.41.65:3000/api/deploy/a55264d88f43df7af7e1baec0d368721a0c91cca43fee8c5'
           method: 'POST'
