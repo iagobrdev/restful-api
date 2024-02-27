@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-    baseURL: process.env.BOOKS_URL,
+    baseURL: 'https://books.iagobrdev.com.br',
 });
 
 export default api;
