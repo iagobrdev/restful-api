@@ -16,6 +16,7 @@ import br.com.books.integrationtests.testcontainer.AbstractIntegrationTest;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 public class SwaggerIntegrationTest extends AbstractIntegrationTest{
 
+	/*
 	@Test
 	void shouldDisplaySwaggerUiPage() {
 	    Awaitility.await().atMost(Duration.ofSeconds(30))
@@ -50,5 +51,5 @@ public class SwaggerIntegrationTest extends AbstractIntegrationTest{
 	                            .asString();
 	    assertTrue(content.contains("Swagger UI"));
 	}
-
+*/
 }

@@ -2,7 +2,6 @@ package br.com.books.config;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.MediaType;
 import org.springframework.http.converter.HttpMessageConverter;
@@ -28,8 +27,7 @@ public class WebConfig implements WebMvcConfigurer{
 		        .allowedOrigins("*")
 		        .allowedMethods("*")
 		        .allowedHeaders("*")
-		        .allowCredentials(true)
-		        .maxAge(3600);
+		        .allowCredentials(true);
 	}
 
 	@Override
