@@ -17,9 +17,6 @@ public class WebConfig implements WebMvcConfigurer{
 
 	private static final MediaType MEDIA_TYPE_APPLICATION_YML = MediaType.valueOf("application/x-yaml");
 	
-	@Value("${cors.originPatterns:default}")
-	private String corsOriginPatterns = "";
-	
 	@Override
 	public void extendMessageConverters(List<HttpMessageConverter<?>> converters) {
 		converters.add(new YamlJackson2HttpMesageConverter());
@@ -27,12 +24,12 @@ public class WebConfig implements WebMvcConfigurer{
 
 	@Override
 	public void addCorsMappings(CorsRegistry registry) {
-		var allowedOrigins = corsOriginPatterns.split(",");
 		registry.addMapping("/**")
-			.allowedOrigins("*")
-			.allowedMethods("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS", "HEAD", "TRACE", "CONNECT")
-			.allowedOrigins(allowedOrigins)
-		.allowCredentials(true);
+		        .allowedOrigins("*")
+		        .allowedMethods("*")
+		        .allowedHeaders("*")
+		        .allowCredentials(true)
+		        .maxAge(3600);
 	}
 
 	@Override

@@ -1,11 +1,5 @@
 server:
   port: 8080
-cors:
-  allowed-origins:
-    - "http://localhost"
-    - "https://www.iagobrdev.com.br"
-    - "https://iagobrdev.com.br"
-    - "https://books.iagobrdev.com.br"
 security:
   jwt:
     token:
