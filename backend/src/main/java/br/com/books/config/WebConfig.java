@@ -29,7 +29,7 @@ public class WebConfig implements WebMvcConfigurer{
 	public void addCorsMappings(CorsRegistry registry) {
 		var allowedOrigins = corsOriginPatterns.split(",");
 		registry.addMapping("/**")
-			.allowedOrigins("http://localhost:3000", "http://localhost", "http://localhost:8080", "https://www.iagobrdev.com.br:3000", "https://www.iagobrdev.com.br")
+			.allowedOrigins("http://localhost:3000", "http://localhost", "http://localhost:8080", "https://iagobrdev.com.br", "http://iagobrdev.com.br", "https://books.iagobrdev.com.br", "http://books.iagobrdev.com.br")
 			.allowedMethods("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS", "HEAD", "TRACE", "CONNECT")
 			.allowedOrigins(allowedOrigins)
 		.allowCredentials(true);
