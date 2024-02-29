@@ -7,7 +7,7 @@ const api = axios.create({
     },
 });
 
-instance.interceptors.request.use(config => {
+api.interceptors.request.use(config => {
     config.headers['Origin'] = 'https://iagobrdev.com.br';
     return config;
 });
