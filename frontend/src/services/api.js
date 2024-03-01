@@ -7,9 +7,8 @@ const api = axios.create({
     },
 });
 
-api.interceptors.request.use(config => {
-    config.headers['Origin'] = 'https://iagobrdev.com.br';
-    return config;
-});
+// Configuração global de CORS
+api.defaults.headers.common['Access-Control-Allow-Origin'] = 'https://iagobrdev.com.br';
+api.defaults.headers.common['Access-Control-Allow-Headers'] = 'Origin, X-Requested-With, Content-Type, Accept';
 
 export default api;
