@@ -3,6 +3,22 @@ import { Container, Row, Col, Image } from 'react-bootstrap';
 import img from '../../assets/img/profile-img.jpg';
 
 export default function About() {
+
+    function calcularIdade() {
+        const hoje = new Date();
+        const nascimento = new Date("1992-10-09");
+      
+        let idade = hoje.getFullYear() - nascimento.getFullYear();
+        const mesAtual = hoje.getMonth();
+        const mesNascimento = nascimento.getMonth();
+      
+        // Verifica se ainda não fez aniversário neste ano
+        if (mesAtual < mesNascimento || (mesAtual === mesNascimento && hoje.getDate() < nascimento.getDate())) {
+          idade--;
+        }
+      
+        return idade;
+    }
     
     return (
         <section id="about" className="about">
@@ -40,14 +56,14 @@ export default function About() {
                                     </span>
                                 </li>
                                 <li>
-                                    <i className="bi bi-chevron-right"></i> <strong>Cidade:</strong> <span>Ametista do Sul / RS</span>
+                                    <i className="bi bi-chevron-right"></i> <strong>Cidade:</strong> <span>Lucas do Rio Verde / MT</span>
                                 </li>
                                 </ul>
                             </Col>
                             <Col lg={6}>
                                 <ul>
                                 <li>
-                                    <i className="bi bi-chevron-right"></i> <strong>Idade:</strong> <span>31</span>
+                                    <i className="bi bi-chevron-right"></i> <strong>Idade:</strong> <span>{ calcularIdade() }</span>
                                 </li>
                                 <li>
                                     <i className="bi bi-chevron-right"></i> <strong>Nível:</strong> <span>Sênior</span>
